@@ -4,11 +4,17 @@ A simple tool to extract your Deezer ARL cookie value using a bookmarklet.
 
 ## 🚀 Quick Start
 
+**Desktop (Recommended):**
 1. Open `index.html` in your browser
 2. Drag the "Get Deezer ARL" button to your bookmarks bar
 3. Go to [deezer.com](https://www.deezer.com) and log in
 4. Click the bookmarklet in your bookmarks bar
 5. Copy your ARL value!
+
+**Mobile:**
+- Open `mobile.html` for mobile-specific instructions
+- Note: Mobile browsers have significant limitations with cookie access
+- Desktop method strongly recommended
 
 ## 📖 Why a Bookmarklet?
 

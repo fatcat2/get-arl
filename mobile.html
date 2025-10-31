@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Deezer ARL - Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .info {
+            background: #e7f3ff;
+            border-left: 4px solid #00C9FF;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .error {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .result {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            display: none;
+        }
+        .copy-btn {
+            background: #28a745;
+            margin-top: 10px;
+        }
+        .instructions {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .step::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Get Deezer ARL (Mobile)</h1>
+
+        <div class="warning">
+            <strong>⚠️ Important Security Note:</strong> This page needs to be hosted on deezer.com to access cookies. Since it can't be, we'll need an alternative approach.
+        </div>
+
+        <div class="error" id="error-message">
+            <strong>❌ Mobile Limitation</strong><br><br>
+            Unfortunately, due to browser security policies, a webpage cannot access cookies from deezer.com unless it's hosted ON deezer.com itself.
+            <br><br>
+            Bookmarklets and developer tools (which work on desktop) are not available on mobile browsers.
+        </div>
+
+        <h2 style="margin-top: 30px; font-size: 18px;">📱 Mobile Solutions:</h2>
+
+        <div class="info">
+            <strong>Option 1: iOS Safari (if you must use mobile)</strong>
+            <div class="instructions">
+                <div class="step">Open Safari and go to deezer.com, log in</div>
+                <div class="step">Open a new tab and bookmark this page</div>
+                <div class="step">Edit the bookmark and replace the URL with the code below</div>
+                <div class="step">Go back to deezer.com and tap the bookmark</div>
+            </div>
+            <div style="background: #f4f4f4; padding: 10px; border-radius: 5px; margin-top: 10px; font-size: 10px; overflow-x: auto;">
+                <code>javascript:(function(){const cookies=document.cookie.split(';');let arl='';for(let cookie of cookies){const [name,value]=cookie.trim().split('=');if(name==='arl'){arl=value;break;}}if(arl){prompt('Your ARL:',arl);}else{alert('Not found!');}})();</code>
+            </div>
+        </div>
+
+        <div class="info">
+            <strong>Option 2: Use a Desktop/Laptop (Recommended)</strong>
+            <div class="instructions">
+                <div class="step">Open index.html on a desktop browser</div>
+                <div class="step">Use the bookmarklet there (much easier!)</div>
+                <div class="step">Copy the ARL and send it to your mobile device</div>
+            </div>
+        </div>
+
+        <div class="info">
+            <strong>Option 3: Request Desktop Site</strong>
+            <div class="instructions">
+                <div class="step">Open deezer.com in your mobile browser</div>
+                <div class="step">Request "Desktop Site" from browser menu</div>
+                <div class="step">Open Developer Tools if available (Chrome on Android)</div>
+                <div class="step">Navigate to Application → Cookies → arl</div>
+            </div>
+        </div>
+
+        <div class="warning" style="margin-top: 30px;">
+            <strong>💡 Why is this so hard on mobile?</strong><br><br>
+            Browser security (Same-Origin Policy) prevents any website from accessing cookies from other domains.
+            On desktop, we can use bookmarklets that run ON the deezer.com page itself. Mobile browsers have
+            limited or no support for bookmarklets, making this task nearly impossible without desktop access.
+        </div>
+
+        <h2 style="margin-top: 30px; font-size: 18px;">🔧 Best Practice</h2>
+        <div class="info">
+            Use a desktop/laptop computer to extract your ARL cookie. It's much simpler and more reliable.
+            Once you have it, you can use it on mobile for whatever application needs it.
+        </div>
+    </div>
+</body>
+</html>
